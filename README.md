@@ -59,7 +59,7 @@ The following files were used to build the Power BI data model and generate adva
 To explore and interact with the dashboard:
 
 1. **Clone or download** this repository.
-2. Open `T20_World_Cup_Analysis.pbix` using **Power BI Desktop** (v2023 or later).
+2. Open `t20_wc_statistics.pbix` using **Power BI Desktop** (v2023 or later).
 3. Make sure the following CSV files are available in the same folder:
    - `dim_match_summary.csv`
    - `dim_players.csv`
