@@ -10,10 +10,10 @@ Interactive Power BI dashboard analyzing ICC T20 World Cup stats with role-based
 
 ## 🛠 Tools & Technologies Used
 
-- **🕸 Web Scraping**: Bright Data platform + ESPNcricinfo dataset
-- **🐍 Python**: Data cleaning & transformation with **Pandas**
-- **📐 Power BI**: Dashboard creation, DAX-based KPIs, custom visuals
-- **🧮 Data Model**: Star Schema (Fact + Dimension tables)
+- **Web Scraping**: Bright Data platform + ESPNcricinfo dataset
+- **Python**: Data cleaning & transformation with **Pandas**
+- **Power BI**: Dashboard creation, DAX-based KPIs, custom visuals
+- **Data Model**: Star Schema (Fact + Dimension tables)
 
 
 ## 🚀 Key Features
@@ -37,11 +37,40 @@ Interactive Power BI dashboard analyzing ICC T20 World Cup stats with role-based
 - Role distributions by team
 - Most efficient players per match stage (Powerplay, Middle, Death)
 
-## 📈 How to Use
+## 📁 Files Used
 
-1. Clone/download the repository.
-2. Open `T20_World_Cup_Analysis.pbix` in Power BI Desktop.
-3. Explore various pages and slicers.
-4. View dynamic insights for player selection and team analysis.
+The following files were used to build the Power BI data model and generate advanced insights:
+
+### 📄 Data Sources (CSV)
+- `dim_match_summary.csv` – Match-level metadata (teams, venue, date, winner)
+- `dim_players.csv` – Player profiles (with images)
+- `dim_players_no_images.csv` – Alternate player info without image paths
+- `fact_batting_summary.csv` – Batting performance data (runs, SR, boundaries)
+- `fact_bowling_summary.csv` – Bowling performance data (wickets, economy, etc.)
+
+### 📊 DAX Measures & Calculated Columns
+- `DAX Measures and Calculated columns.xlsx` – Contains the logic used for:
+  - Custom KPIs (e.g., Death Overs Impact, Dot %, Finisher Rating)
+  - Role-wise calculations
+  - Ranking and filters for visuals
+
+## 📌 How to Use
+
+To explore and interact with the dashboard:
+
+1. **Clone or download** this repository.
+2. Open `T20_World_Cup_Analysis.pbix` using **Power BI Desktop** (v2023 or later).
+3. Make sure the following CSV files are available in the same folder:
+   - `dim_match_summary.csv`
+   - `dim_players.csv`
+   - `fact_batting_summary.csv`
+   - `fact_bowling_summary.csv`
+4. Load the `.pbix` file and check if the data loads correctly. If needed, **use Power Query to re-map the data source paths**.
+5. Explore the dashboard:
+   - Use slicers to filter by team, player role, venue, match, etc.
+   - Hover over KPIs to view tooltips and insights.
+   - Drill through player profiles to see role-specific breakdowns.
+
+
 
 
